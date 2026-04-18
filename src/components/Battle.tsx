@@ -24,8 +24,10 @@ const Battle = ({ damageTrigger }: { damageTrigger: number }) => {
         <img
           src="/TK_monster.jpg"
           alt="monster battle ui"
-          className="animate-bounce-x"
-          //className={isDamaged ? "animate-bounce-x" : ""}
+          style={{
+            animation: "shakeX 0.4s ease-in-out infinite",
+          }}
+          className={isDamaged ? "animate-bounce-x" : ""}
         />
         <div className="flex h-full">
           <Inventory />
