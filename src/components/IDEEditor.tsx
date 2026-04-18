@@ -78,7 +78,7 @@ const IDEEditor = () => {
   return (
     <div className="flex flex-col w-full h-full bg-black text-white">
       {/* Editor */}
-      <div className="h-96 border-b border-gray-700">
+      <div className="h-7/10 border-b border-gray-700">
         <Editor
           height="100%"
           defaultLanguage="javascript"
@@ -89,23 +89,26 @@ const IDEEditor = () => {
       </div>
 
       {/* Controls */}
-      <div className="p-2">
-        <button onClick={runAll} className="bg-green-600 px-4 py-2 rounded">
-          RUN
-        </button>
-      </div>
+      <div className="flex flex-row bg-gray-900">
+        <div className="p-2">
+          <button onClick={runAll} className="bg-green-600 px-4 py-2 rounded">
+            RUN
+          </button>
+        </div>
 
-      <div className="p-2">
-        <button
-          onClick={runValidation}
-          className="bg-green-600 px-4 py-2 rounded"
-        >
-          SUBMIT
-        </button>
+        <div className="p-2">
+          <button
+            onClick={runValidation}
+            className="bg-amber-400 px-4 py-2 rounded"
+          >
+            SUBMIT
+          </button>
+        </div>
       </div>
-
       {/* Output */}
-      <OutputConsole output={output} />
+      <div className="h-3/10">
+        <OutputConsole output={output} />
+      </div>
     </div>
   );
 };

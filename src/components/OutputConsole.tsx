@@ -1,6 +1,6 @@
 const OutputConsole = ({ output }: { output: string[] }) => {
   return (
-    <div className="bg-gray-900 p-4 h-40 overflow-auto">
+    <div className="bg-black border-solid border-4 p-4 h-full overflow-auto">
       {output.map((line, i) => (
         <div key={i} className="text-sm">
           {line}
