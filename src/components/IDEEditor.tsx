@@ -4,7 +4,7 @@ import OutputConsole from "./OutputConsole";
 import { validateCode } from "../validateCode";
 import { codeSnippets } from "../codeSnippets";
 
-const IDEEditor = () => {
+const IDEEditor = ({ onSuccess }: { onSuccess: () => void }) => {
   const [code, setCode] = useState<string>("");
 
   const [output, setOutput] = useState<string[]>([]);
@@ -31,7 +31,8 @@ const IDEEditor = () => {
     setOutput(result.results);
 
     if (result.passed) {
-      console.log("All tests passed!");
+      console.log("ALL PASSED");
+      onSuccess();
     }
   };
 
