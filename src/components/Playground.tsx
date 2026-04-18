@@ -1,6 +1,5 @@
 import IDEEditor from "./IDEEditor";
 import Controls from "./Controls";
-import OutputConsole from "./OutputConsole";
 const Playground = () => {
   return (
     <>
